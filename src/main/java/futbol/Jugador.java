@@ -33,8 +33,9 @@ public class Jugador extends Futbolista{
         return "El futbolista "+getNombre()+" tiene "+getEdad()+ ", y juega de "+getPosicion()+" con el dorsal "+dorsal+ ". Ha marcado "+golesMarcados;
     }
 
-
     @Override
-    public int compareTo(Futbolista o) {
-        return Math.abs(this.getEdad() - o.getEdad());    }
+    public int compareTo(Object o) {
+        Futbolista f = (Futbolista) o;
+        return Math.abs(this.getEdad() - f.getEdad());
+    }
 }
